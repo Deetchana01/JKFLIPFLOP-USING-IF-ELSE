@@ -34,15 +34,36 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
-/* write all the steps invloved */
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
+
 
 **PROGRAM**
+```
+module speak(q,qbar,j,k,clk);
+input j,k,clk;
+output q,qbar;
+wire w1,w2;
+nand(w1,j,clk,qbar);
+nand(w2,k,clk,q);
+nand(q,w1,qbar);
+nand(qbar,w2,q);
+endmodule
+```
+Developed by:DEETCHANA S  RegisterNumber:24004599
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Screenshot 2024-12-30 162513](https://github.com/user-attachments/assets/dc16f9d0-afe7-4876-8a01-a4be972327e0)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![Screenshot 2024-12-30 162610](https://github.com/user-attachments/assets/33547e75-0563-4bbe-8acb-42badd1d99c4)
+
 **RESULTS**
+
+Implement JK flipflop using Verilog is successful
